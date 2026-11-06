@@ -1,0 +1,18 @@
+package org.delcom.ifs25026pbo2026springboottodolist.domain.exception;
+
+/**
+ * Exception yang dilempar ketika entitas dengan ID tertentu tidak ditemukan.
+ */
+public class EntityNotFoundException extends DomainException {
+
+    private final int id;
+
+    public EntityNotFoundException(int id) {
+        super("Todo dengan ID " + id + " tidak ditemukan.");
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+}
